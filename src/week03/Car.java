@@ -33,7 +33,8 @@ public class Car {
 
     //매서드
 
-   double gasPedal(double kmh) {
+   double gasPedal(double kmh,char type) {
+        changeGear(type);
         speed = kmh;
         return speed;
     }
@@ -56,6 +57,13 @@ public class Car {
     void horn(){
         System.out.println("빵빵");
         System.out.println("빵빵");
+    }
+    //
+
+    void carSpeeds(double ... speeds){
+        for (double v : speeds){
+            System.out.println("v = " + v);
+        }
     }
 
 
